@@ -834,7 +834,7 @@ h3 {
     z-index: 101;
 }
 
-.quick-nav {
+.sticky-nav {
     position: fixed;
     z-index: 10;
     top: 50%;
@@ -843,11 +843,11 @@ h3 {
         -ms-transform: translateX(100%) translateY(-50%);
             transform: translateX(100%) translateY(-50%);
 }
-.quick-nav__item {
+.sticky-nav__item {
     margin-bottom: 1px; 
     background: #00adef;
 }
-.quick-nav .button-primary {
+.sticky-nav .button-primary {
     padding-right: 20px;
     -webkit-transition: -webkit-transform .3s ease;
          -o-transition:         transform .3s ease;
@@ -855,10 +855,10 @@ h3 {
             transition:         transform .3s ease;
             transition:         transform .3s ease, -webkit-transform .3s ease;
 }
-.quick-nav .button-primary .icon {
+.sticky-nav .button-primary .icon {
     margin-right: 16px;
 }
-.quick-nav .button-primary:hover {
+.sticky-nav .button-primary:hover {
     -webkit-transform: translateX(calc(-100% + 50px));
         -ms-transform: translateX(calc(-100% + 50px));
             transform: translateX(calc(-100% + 50px));
@@ -1357,6 +1357,18 @@ h3 {
     max-width: 630px;
 }
 
+.footer-main__bottom {
+    font-size: 14px;
+    line-height: 1.52; 
+    padding: 23px 0;
+    color: #d7d7d7;
+}
+.footer-main__bottom .row {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
 .subscribe__title {
     margin-bottom: 13px; 
     color: white;
@@ -1432,6 +1444,62 @@ h3 {
     background: #00adef;
 
     fill: #3c3c3c;
+}
+
+.lang .button {
+    font-size: 14px;
+    position: relative; 
+    color: #d7d7d7;
+}
+.lang .button:not(:last-child) {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.lang .button:not(:last-child)::after {
+    position: absolute;
+    top: calc(50% - 10px); 
+    right: 0;
+    width: 1px;
+    height: 20px;
+    content: '';
+    background: #3c3c3c;
+}
+.lang .button:hover {
+    text-decoration: underline;
+}
+
+.footer-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.footer-menu__item {
+    position: relative;
+}
+.footer-menu__item:not(:last-child) {
+    margin-right: 20px;
+    padding-right: 20px;
+}
+.footer-menu__item:not(:last-child)::after {
+    position: absolute;
+    top: calc(50% - 10px); 
+    right: 0;
+    width: 1px;
+    height: 20px;
+    content: '';
+    background: #3c3c3c;
+}
+
+.footer-menu__link {
+    text-decoration: none; 
+    color: #d7d7d7;
+}
+.footer-menu__link:hover {
+    text-decoration: underline;
 }
 
 /*============================================================================
