@@ -9,6 +9,8 @@
 document.addEventListener('DOMContentLoaded', function(){
 	mainMenu();
 	mainSLider();
+	modelSort();
+	cartegoryCarSort();
 })
 
 const mainMenu = () => {
@@ -71,6 +73,39 @@ const mainSLider = () => {
 		// 	prevEl: '.brands-slider .swiper-button-prev',
 		// },
 	})
+}
+
+const modelSort = () => {
+	const buttons = document.querySelectorAll('.model-sort__button');
+
+	buttons.forEach(button => {
+		button.addEventListener('click', classToggle);
+		
+	});
+
+	function classToggle(){
+		buttons.forEach(button => button.classList.remove('_is-active'));
+		this.classList.add('_is-active');
+	}
+}
+
+const cartegoryCarSort = () => {
+	const buttons = document.querySelectorAll('.category-sort__item .button');
+	const butAll = document.querySelector('.category-sort .button-primary');
+
+	buttons.forEach(button => {
+		button.addEventListener('click', classToggle);
+		
+	});
+
+	butAll.addEventListener('click', function(){
+		buttons.forEach(button => button.classList.remove('_is-active'));
+	})
+
+	function classToggle(){
+		buttons.forEach(button => button.classList.remove('_is-active'));
+		this.classList.add('_is-active');
+	}
 }
 
 // const mainSlider = () => {
