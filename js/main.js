@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	mainSLider();
 	modelSort();
 	cartegoryCarSort();
+	cardSlider();
 })
 
 const mainMenu = () => {
@@ -107,6 +108,53 @@ const cartegoryCarSort = () => {
 		this.classList.add('_is-active');
 	}
 }
+
+const cardSlider = () => {
+
+	let slider = new Swiper('.card-slider', {
+		// loop: true,
+		spaceBetween: 20,
+		// slidesPerView: 1,
+		initialSlide: 1,
+		centeredSlides: true,
+		centeredSlidesBounds: true,
+		effect: 'fade',
+		autoplay: {
+			autoplay: false,
+			delay: 1300,
+		},
+		
+
+		pagination: {
+			el: '.card-slider__nav',
+			type: 'bullets',
+			clickable: true,
+			bulletActiveClass: '_is-active',
+			bulletClass: 'card-slider__bullet'
+		},
+
+	});
+
+
+	slider.forEach((slide, index) => {
+		let card = document.querySelectorAll('.card');
+
+		slide.autoplay.stop();
+
+		card[index].addEventListener('mouseenter', function() {
+			slide.autoplay.start();
+
+		});
+
+		card[index].addEventListener('mouseleave', function() {
+			slide.autoplay.stop();
+			slide.slideTo(1);
+		})
+
+	})
+
+}
+
 
 // const mainSlider = () => {
 // 	let slider = new Swiper('.js-main-slider', {
