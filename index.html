@@ -78,6 +78,14 @@
 							</span>
 						</button>
 					</div>
+
+					<button class="button _icon button-burger">
+						<span class="icon">
+							<svg class="icon-burger">
+								<use xlink:href="symbol/sprite.svg#icon-burger"></use>
+							</svg>
+						</span>
+					</button>
 				</div>
 			</div>
 	
@@ -495,10 +503,10 @@
 				<div class="model-sort__content">
 					<ul class="model-sort__list">
 						<li class="model-sort__item">
-							<button class="button model-sort__button _is-active">Усі Моделі</button>
+							<button class="button model-sort__button _is-active" data-model-sort-label="Усі Моделі">Усі Моделі</button>
 						</li>
 						<li class="model-sort__item">
-							<button class="button model-sort__button">
+							<button class="button model-sort__button" data-model-sort-label="EQ Electric Intelligence">
 								<svg width="48" height="22" viewBox="0 0 48 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M17.2435 0.688027C19.2449 0.688027 21.2621 0.688027 23.2635 0.688027C23.295 0.688027 23.3108 0.688027 23.3423 0.688027C23.4211 0.672027 23.4526 0.720026 23.4368 0.800026C23.4368 0.816026 23.4368 0.832027 23.4368 0.848027C23.4368 1.82403 23.4368 2.78403 23.4368 3.76003C23.4368 3.90403 23.4368 3.90403 23.2793 3.90403C19.6704 3.90403 16.0773 3.90403 12.4684 3.90403C11.7908 3.90403 11.1289 3.93603 10.467 4.00003C9.61603 4.09603 8.78079 4.24003 7.97708 4.49603C7.36247 4.68803 6.77938 4.94403 6.22781 5.28003C5.72351 5.58403 5.31377 5.98403 4.93555 6.43203C4.63613 6.78403 4.36822 7.13603 4.13183 7.53603C3.84817 8.01603 3.61178 8.52803 3.43843 9.07203C3.20204 9.82403 3.12324 10.576 3.15476 11.36C3.18628 11.92 3.28084 12.48 3.45419 13.024C3.83241 14.24 4.52581 15.264 5.42409 16.144C5.81807 16.528 6.27508 16.816 6.76362 17.056C7.56734 17.456 8.41833 17.696 9.30085 17.856C10.3094 18.032 11.318 18.112 12.3424 18.128C15.9827 18.144 19.6231 18.128 23.2635 18.144C23.4368 18.144 23.4211 18.144 23.4368 18.32C23.4368 19.28 23.4368 20.24 23.4368 21.184C23.4368 21.344 23.4368 21.344 23.2793 21.344C20.9311 21.344 18.583 21.344 16.2349 21.344C14.7378 21.344 13.2564 21.344 11.7593 21.344C10.9556 21.344 10.1518 21.264 9.34813 21.136C8.68624 21.024 8.04011 20.896 7.40974 20.704C6.70058 20.496 6.02294 20.24 5.36105 19.904C4.66764 19.552 4.00576 19.152 3.43843 18.624C2.88686 18.128 2.41408 17.584 1.95706 16.992C1.46853 16.352 1.05879 15.68 0.743607 14.928C0.475701 14.288 0.28659 13.632 0.160517 12.944C0.0344431 12.224 -0.0128344 11.488 0.00292477 10.752C0.018684 9.77603 0.160517 8.81603 0.459942 7.88803C0.633293 7.32803 0.88544 6.78403 1.16911 6.27203C1.54733 5.58403 2.03586 4.96003 2.54015 4.36803C3.12324 3.69603 3.76937 3.10403 4.54157 2.64003C5.17194 2.25603 5.84958 1.93603 6.54299 1.68003C7.1576 1.45603 7.80372 1.26403 8.43409 1.12003C9.01718 0.992026 9.60027 0.896027 10.1834 0.832027C11.7593 0.656027 13.351 0.736026 14.9269 0.720026C15.7148 0.672026 16.4713 0.688027 17.2435 0.688027Z" fill="#009FE2"/>
 									<path d="M37.2104 22C36.4854 22 35.7763 21.936 35.0671 21.792C33.7433 21.52 32.5141 21.024 31.3795 20.272C30.6545 19.808 30.0084 19.248 29.4096 18.624C28.9525 18.144 28.5428 17.616 28.1646 17.056C27.7076 16.368 27.3451 15.632 27.0614 14.848C26.9039 14.4 26.762 13.952 26.6517 13.488C26.5099 12.816 26.4153 12.144 26.3838 11.472C26.368 10.928 26.3838 10.368 26.4311 9.824C26.4941 9.216 26.6044 8.624 26.762 8.048C26.9826 7.232 27.2978 6.464 27.6918 5.728C27.9755 5.216 28.2907 4.72 28.6531 4.256C29.0156 3.776 29.4253 3.328 29.8666 2.912C30.5285 2.288 31.2691 1.76 32.0729 1.312C32.5614 1.056 33.0499 0.831999 33.57 0.639999C34.1058 0.447999 34.6416 0.304 35.1932 0.192C35.9181 0.0480001 36.6588 0 37.3837 0C37.9038 0 38.4081 0.0639996 38.9124 0.144C39.653 0.272 40.378 0.464 41.0714 0.736C41.8278 1.024 42.5212 1.408 43.1989 1.856C43.8607 2.304 44.4596 2.816 45.0112 3.408C45.7676 4.224 46.398 5.136 46.8865 6.144C47.2805 6.976 47.5799 7.824 47.769 8.736C47.8793 9.312 47.9581 9.888 47.9897 10.464C48.0054 10.896 48.0054 11.344 47.9739 11.776C47.9581 12.192 47.8951 12.608 47.8163 13.008C47.706 13.616 47.5484 14.224 47.3278 14.816C47.2805 14.944 47.2332 15.072 47.1859 15.2C47.1544 15.296 47.1229 15.296 47.0599 15.232C46.6344 14.784 46.1931 14.352 45.7676 13.904C45.4209 13.552 45.0742 13.2 44.7117 12.832C44.6645 12.784 44.6487 12.752 44.6645 12.688C44.8536 11.824 44.8851 10.96 44.7905 10.096C44.7117 9.44 44.5699 8.816 44.3335 8.192C43.9868 7.296 43.514 6.496 42.8679 5.776C42.2375 5.072 41.4969 4.496 40.6616 4.048C40.0943 3.76 39.4954 3.536 38.8651 3.392C38.1874 3.232 37.494 3.168 36.8006 3.2C36.0284 3.248 35.272 3.392 34.5471 3.664C33.8537 3.92 33.2075 4.272 32.6244 4.72C31.9468 5.232 31.3795 5.84 30.8909 6.544C30.5127 7.104 30.1975 7.696 29.9769 8.336C29.7405 8.992 29.5987 9.68 29.5514 10.384C29.5041 10.976 29.5199 11.552 29.6144 12.144C29.7405 12.992 29.9927 13.776 30.3709 14.544C30.8752 15.552 31.5528 16.384 32.4196 17.088C33.2863 17.808 34.2792 18.288 35.3665 18.56C36.2491 18.784 37.1473 18.832 38.0614 18.736C38.3135 18.704 38.5657 18.672 38.8178 18.608C38.8966 18.592 38.9596 18.608 39.0069 18.672C39.7791 19.472 40.5671 20.256 41.3393 21.056C41.4181 21.136 41.3866 21.152 41.3078 21.184C40.6931 21.44 40.0785 21.632 39.4324 21.776C38.6917 21.92 37.951 22 37.2104 22Z" fill="#009FE2"/>
@@ -508,14 +516,14 @@
 							</button>
 						</li>
 						<li class="model-sort__item">
-							<button class="button model-sort__button">
+							<button class="button model-sort__button" data-model-sort-label="AMG">
 								<svg width="86" height="8" viewBox="0 0 86 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M0 8H9.3011L14.1705 0.0347612H4.90567L0 8ZM18.7121 0.0347612H14.9335L10.0283 8H13.8436L18.7121 0.0347612ZM14.7519 8H17.2949L22.1638 0.0347612H19.6204L14.7519 8ZM18.5305 8H20.3834L25.3245 0.0347612H23.3989L18.5305 8ZM28.3037 0.0347612H26.7417L21.8728 8H23.4352L28.3037 0.0347612ZM86 1.91287V0H69.8681V7.9648H86V3.02574H76.3721V4.93861H83.3472V5.98196H72.5568V1.91287H86ZM64.2361 2.01716V7.9648H66.9253V0H62.9651L57.5152 3.5824L51.8837 0H48.0684V7.9648H50.7575V2.01716L56.0254 5.70429H58.7508L64.2361 2.01716ZM46.1433 7.9648L41.6743 0H30.8834L25.9786 7.9648H29.0304L30.084 6.2605H42.2553L43.2004 7.9648H46.1433ZM40.0755 1.91287L41.2017 4.2077H31.1744L32.4821 1.91287H40.0755Z" fill="#222222"/>
 								</svg>
 							</button>
 						</li>
 						<li class="model-sort__item">
-							<button class="button model-sort__button">
+							<button class="button model-sort__button" data-model-sort-label="Maybach">
 								<svg width="93" height="8" viewBox="0 0 93 8" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M41.8912 3.9794C41.8912 2.83896 41.8912 1.67425 41.8912 0.533811C41.8912 0.194104 41.9427 0.145574 42.3031 0.145574C44.1312 0.145574 45.9593 0.121309 47.8131 0.145574C48.7143 0.145574 49.5382 0.363959 50.1819 1.04337C50.8513 1.74705 50.7998 2.66911 50.1046 3.34852C49.8987 3.54264 49.9244 3.59117 50.1819 3.71249C50.7998 3.95514 51.3148 4.31911 51.598 4.90146C51.9842 5.67793 51.7525 6.5272 51.0316 7.10955C50.4394 7.57058 49.7699 7.81323 48.9975 7.81323C46.7575 7.81323 44.5174 7.81323 42.3031 7.81323C41.9942 7.81323 41.9427 7.7647 41.9427 7.47352C41.8912 6.30882 41.8912 5.14411 41.8912 3.9794ZM46.1653 4.19779C45.3928 4.19779 44.6462 4.19779 43.8737 4.19779C43.5133 4.19779 43.4618 4.24631 43.4618 4.58602C43.4618 5.31396 43.4618 6.0419 43.4618 6.76984C43.4618 7.06102 43.539 7.10955 43.8223 7.10955C45.3671 7.10955 46.8862 7.10955 48.4311 7.10955C48.8173 7.10955 49.2035 7.01249 49.5382 6.76984C50.3879 6.18749 50.4909 5.2897 49.6669 4.61029C49.2807 4.29484 48.843 4.17352 48.3281 4.17352C47.6329 4.19778 46.8862 4.19779 46.1653 4.19779ZM45.6761 0.897782C45.0581 0.897782 44.4402 0.897782 43.8223 0.897782C43.539 0.897782 43.4618 0.94631 43.4618 1.23749C43.4618 1.89263 43.4618 2.52352 43.4618 3.17866C43.4618 3.39705 43.539 3.51837 43.7965 3.51837C45.0066 3.51837 46.191 3.54264 47.4012 3.51837C48.0963 3.49411 48.6628 3.20293 49.0232 2.62058C49.1777 2.35367 49.1777 2.08675 49.0232 1.81984C48.637 1.21322 48.0963 0.922048 47.3497 0.922048C46.7832 0.897783 46.2168 0.897782 45.6761 0.897782Z" fill="#222222"/>
 									<path d="M9.78405 1.60145C9.57807 1.7713 9.37209 1.91689 9.19186 2.08674C8.08472 3.05733 7.00332 4.00365 5.89618 4.97424C5.71595 5.11983 5.61296 5.09557 5.45847 4.97424C4.48007 4.12498 3.50166 3.27571 2.549 2.42645C2.26578 2.1838 1.98256 1.94115 1.69934 1.69851C1.67359 1.67424 1.5706 1.64998 1.54485 1.64998C1.49336 1.67424 1.46761 1.74703 1.46761 1.79556C1.46761 1.91689 1.46761 2.06248 1.46761 2.1838C1.46761 3.95513 1.46761 5.70219 1.46761 7.47351C1.46761 7.74042 1.39037 7.81322 1.10714 7.81322C0.849668 7.81322 0.566445 7.81322 0.30897 7.81322C0.10299 7.81322 0 7.71616 0 7.52204C0 7.40072 0 7.25513 0 7.1338C0 4.92571 0 2.71762 0 0.533799C0 0.194092 0.0514951 0.145561 0.41196 0.145561C0.61794 0.145561 0.82392 0.169826 1.0299 0.145561C1.36462 0.121297 1.59635 0.218358 1.82807 0.436741C2.88372 1.38307 3.96512 2.32939 5.02076 3.27571C5.17525 3.4213 5.35548 3.56689 5.53571 3.66395C5.61296 3.71248 5.76744 3.68821 5.81894 3.63968C6.53987 3.0088 7.2608 2.35365 7.98173 1.72277C8.52242 1.23747 9.08887 0.776447 9.62957 0.315417C9.70681 0.242623 9.83555 0.194092 9.93854 0.169828C10.3248 0.145563 10.711 0.145563 11.1229 0.169828C11.2774 0.169828 11.3804 0.266888 11.3804 0.436741C11.3804 0.558065 11.3804 0.703651 11.3804 0.824974C11.3804 3.03306 11.3804 5.24116 11.3804 7.44925C11.3804 7.76469 11.3289 7.81322 10.9942 7.81322C10.7367 7.81322 10.4792 7.81322 10.2218 7.81322C9.96429 7.81322 9.88704 7.71616 9.88704 7.49777C9.88704 7.03674 9.88704 6.57571 9.88704 6.09042C9.88704 4.68307 9.88704 3.25145 9.91279 1.84409C9.91279 1.7713 9.88704 1.72277 9.88704 1.64998C9.83555 1.64998 9.8098 1.62571 9.78405 1.60145Z" fill="#222222"/>
@@ -528,6 +536,18 @@
 							</button>
 						</li>
 					</ul>
+
+					<button class="model-sort__dropdown button-primary _dark _icon-right">
+					
+						<span class="button-text">Усі моделі</span>
+
+						<span class="icon _down">
+							<svg class="icon-arrow-next">
+								<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+							</svg>
+						</span>
+					
+					</button>
 				</div>
 			</div>
 		</div>
@@ -660,9 +680,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -670,7 +690,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -678,7 +698,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -688,6 +708,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 						</div>
@@ -730,9 +757,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -740,7 +767,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -748,7 +775,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -758,6 +785,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -794,9 +828,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -804,7 +838,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -812,7 +846,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -822,6 +856,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -856,9 +897,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -866,7 +907,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -874,7 +915,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -884,6 +925,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 						</div>
@@ -926,9 +974,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -936,7 +984,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -944,7 +992,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -954,6 +1002,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -990,9 +1045,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1000,7 +1055,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1008,7 +1063,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1018,6 +1073,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1052,9 +1114,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1062,7 +1124,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1070,7 +1132,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1080,6 +1142,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1116,9 +1185,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1126,7 +1195,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1134,7 +1203,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1144,6 +1213,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1183,9 +1259,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1193,7 +1269,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1201,7 +1277,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1211,6 +1287,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1247,9 +1330,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1257,7 +1340,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1265,7 +1348,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1275,6 +1358,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1309,9 +1399,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1319,7 +1409,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1327,7 +1417,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1337,6 +1427,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1370,9 +1467,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1380,7 +1477,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1388,7 +1485,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1398,6 +1495,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1432,9 +1536,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1442,7 +1546,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1450,7 +1554,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1460,6 +1564,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 							<div class="cards-group__col">
@@ -1493,9 +1604,9 @@
 											<div class="card__price">Від: 1 226 211 грн</div>
 										</div>
 									</a>
-									<div class="card__controll card-controll">
-										<div class="card-controll__list">
-											<button class="card-controll__item button _icon-left ">
+									<div class="card__options card-options">
+										<div class="card-options__list">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-sale">
 														<use xlink:href="symbol/sprite.svg#icon-sale"></use>
@@ -1503,7 +1614,7 @@
 												</span>	
 												Узнать больше
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-checkmark">
 														<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
@@ -1511,7 +1622,7 @@
 												</span>	
 												Дізнатись про наявність
 											</button>
-											<button class="card-controll__item button _icon-left ">
+											<button class="card-options__item button _icon-left ">
 												<span class="icon">
 													<svg class="icon-test-drive">
 														<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
@@ -1521,6 +1632,13 @@
 											</button>
 										</div>
 									</div>
+									<button class="button card__show-options">
+										<span class="icon">
+											<svg class="icon-plus">
+												<use xlink:href="symbol/sprite.svg#icon-plus"></use>
+											</svg>
+										</span>	
+									</button>
 								</div>
 							</div>
 						</div>
@@ -1530,7 +1648,6 @@
 		</div>
 		
 	</section>
-
 
 			<footer class="site__footer footer">
 				<div class="footer__nav">

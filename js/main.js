@@ -10,8 +10,10 @@ document.addEventListener('DOMContentLoaded', function(){
 	mainMenu();
 	mainSLider();
 	modelSort();
+	modelSortMobile();
 	cartegoryCarSort();
 	cardSlider();
+	cardOptionsToggle();
 })
 
 const mainMenu = () => {
@@ -90,6 +92,26 @@ const modelSort = () => {
 	}
 }
 
+const modelSortMobile = () => {
+	$('.model-sort__dropdown').click(function(){
+		$(this).toggleClass('_is-opened');
+
+		if($('.model-sort__list').hasClass('_is-visible')){
+			$('.model-sort__list').removeClass('_is-visible');
+		} else {
+			$('.model-sort__list').addClass('_is-visible');
+		}
+		
+	});
+
+	$('.model-sort__button').click(function(){
+
+		$('.model-sort__list').removeClass('_is-visible');
+		$('.model-sort__dropdown').removeClass('_is-opened').find('.button-text').text($(this).attr('data-model-sort-label'));
+
+	});
+}
+
 const cartegoryCarSort = () => {
 	const buttons = document.querySelectorAll('.category-sort__item .button');
 	const butAll = document.querySelector('.category-sort .button-primary');
@@ -153,6 +175,23 @@ const cardSlider = () => {
 
 	})
 
+}
+
+const cardOptionsToggle = () => {
+
+	$('.card__show-options').click(function (e) { 
+		e.preventDefault();
+
+		$(this).toggleClass('_is-active');
+
+		if($(this).parent().find('.card-options').hasClass('_is-visible')){
+			$(this).parent().find('.card-options').removeClass('_is-visible');
+		} else {
+			$(this).parent().find('.card-options').addClass('_is-visible');
+		}
+		
+		
+	});
 }
 
 
