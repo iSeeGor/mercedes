@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	cartegoryCarSort();
 	cardSlider();
 	cardOptionsToggle();
+	stickyNav();
 })
 
 const mainMenu = () => {
@@ -192,6 +193,15 @@ const cardOptionsToggle = () => {
 		
 		
 	});
+}
+
+const stickyNav = () => {
+
+	$('.sticky-nav .button-primary__text').each(function(){
+	
+		$(this).html($(this).parent().attr('data-sticky-nav-mobile-text'));
+	})
+
 }
 
 
