@@ -70,13 +70,13 @@
 								</svg>
 							</span>
 						</button>
-						<button class="button _icon">
+						<a class="button _icon js-popup" href="#popup-login">
 							<span class="icon">
 								<svg class="icon-user">
 									<use xlink:href="symbol/sprite.svg#icon-user"></use>
 								</svg>
 							</span>
-						</button>
+						</a>
 					</div>
 
 					<button class="button _icon button-burger">
@@ -1905,3 +1905,73 @@
 	</body>
 
 </html>
+
+<div class="site__popup">
+
+	<div id="popup-login" class="popup popup-main popup-login">
+
+		<div class="popup-login__container">
+			<div class="popup-login__brand">
+				<img src="images/mercedes-benz-horizontal-logo.svg" alt="">
+			</div>
+
+			<div class="popup-login__main">
+				<header class="popup-login__header">
+					<h3 class="popup-login__title">Вітаємо Вас у персональному кабінеті Mercedes-Benz</h3>
+				</header>
+
+				<div class="popup-login__body">
+					<form class="form form-login" autocomplete="off">
+						<div class="form-group">
+							<label class="label" for="form-subsrcribe-email">Email aбо телефон</label>
+							<input class="input" type="text" placeholder="Ваша email адреса або телефон" required="">
+						</div>
+
+						<div class="form-group">
+							<label class="label" for="form-subsrcribe-email">Пароль</label>
+							<input class="input" type="password" placeholder="Введіть Ваш пароль" required="">
+						</div>
+
+						<button class="button-primary form-login__button" type="submit">
+							Увійти
+						</button>
+
+					</form>
+
+					<div class="social-login">
+						<button class="social-login__button button-primary _google">
+							<span class="icon">
+								<svg class="icon-google">
+									<use xlink:href="symbol/sprite.svg#icon-google"></use>
+								</svg>
+							</span>
+							Авторизуватиcя в Google
+						</button>
+						<button class="social-login__button button-primary _facebook">
+							<span class="icon">
+								<svg class="icon-facebook">
+									<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+								</svg>
+							</span>
+							Авторизуватиcя в Facebook
+						</button>
+					</div>
+				</div>
+				
+				<footer class="popup-login__footer">
+					<p>Якщо Ви тут вперше, будь ласка <a href="#popup-registration" class="link">зареєструйтесь</a></p>
+				</footer>
+			</div>
+
+
+		</div>
+
+		<button class="button _icon popup__close">
+			<span class="icon">
+				<svg class="icon-times">
+					<use xlink:href="symbol/sprite.svg#icon-times"></use>
+				</svg>
+			</span>
+		</button>
+	</div>
+</div>

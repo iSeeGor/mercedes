@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	cartegoryCarSort();
 	cardSlider();
 	cardOptionsToggle();
-	stickyNav();
+
+	popupInit();
 })
 
 const mainMenu = () => {
@@ -195,15 +196,22 @@ const cardOptionsToggle = () => {
 	});
 }
 
-const stickyNav = () => {
+const popupInit = () => {
 
-	$('.sticky-nav .button-primary__text').each(function(){
-	
-		$(this).html($(this).parent().attr('data-sticky-nav-mobile-text'));
-	})
+	$('.js-popup').magnificPopup({
+		type: 'inline',
+		preloader: false,
+		modal: true,
+		// closeOnContentClick: true,
+		// closeBtnInside: false,
+	});
 
+	// Close Popup
+	$(document).on('click', '.popup__close', function (e) {
+		e.preventDefault();
+		$.magnificPopup.close();
+	});
 }
-
 
 // const mainSlider = () => {
 // 	let slider = new Swiper('.js-main-slider', {

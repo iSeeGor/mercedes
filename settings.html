@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>Mercedes Benz</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!--== Preload Fonts -->
+	<link rel="preload" href="fonts/CorporateA-Regular.woff2" as="font" type="font/woff" crossorigin="">
+	<link rel="preload" href="fonts/CorporateS-Regular.woff2" as="font" type="font/woff" crossorigin="">
+
+	<!--== favicon  -->
+	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+	<link rel="manifest" href="favicon/site.webmanifest">
+	<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#888888">
+	<meta name="msapplication-TileColor" content="#000000">
+	<meta name="theme-color" content="#000000">
+
+	<link rel="stylesheet" href="css/vendor.css">
+	<link rel="stylesheet" href="css/index.css">
+</head>
+
+<body class="body">
+	<div class="site">
+		<header class="site__header header">
+			<div class="header__top">
+				<div class="container">
+					<a class="header__logo" href="/">
+						<img src="images/mercedes-benz-logo.svg" alt="site logo">
+					</a>
+
+					<div class="header__info">
+						<div class="header__worktime worktime">
+							<div class="worktime__item">
+								<span class="worktime__title">Відділ Сервісу:</span>
+								<span class="worktime__time">9:00 до 19:00</span>
+							</div>
+							<div class="worktime__item">
+								<span class="worktime__title">Автосалон:</span>
+								<span class="worktime__time">10:00 до 20:00</span>
+							</div>
+						</div>
+						
+						<div class="header__address">Столичне шосе, 90</div>
+
+						<a class="header__phone" href="tel:+38044277264">+38 (044)-277-264</a>
+					</div>
+					
+					<div class="header__controll"> 
+						<button class="button _icon header__search">
+							Поишук по сайту
+							<span class="icon">
+								<svg class="icon-search">
+									<use xlink:href="symbol/sprite.svg#icon-search"></use>
+								</svg>
+							</span>
+						</button>
+
+						<button class="button _icon _wishlist">
+							<span class="icon">
+								<svg class="icon-heart">
+									<use xlink:href="symbol/sprite.svg#icon-heart"></use>
+								</svg>
+							</span>
+						</button>
+						<a class="button _icon js-popup" href="#popup-login">
+							<span class="icon">
+								<svg class="icon-user">
+									<use xlink:href="symbol/sprite.svg#icon-user"></use>
+								</svg>
+							</span>
+						</a>
+					</div>
+
+					<button class="button _icon button-burger">
+						<span class="icon">
+							<svg class="icon-burger">
+								<use xlink:href="symbol/sprite.svg#icon-burger"></use>
+							</svg>
+						</span>
+					</button>
+				</div>
+			</div>
+	
+			<div class="header__nav">
+				<div class="container">
+					<nav class="menu">
+	<ul class="menu__list">
+		<li class="menu__item _has-submenu">
+			<a href="#" class="menu__link _is-active">Автомобілі</a>
+
+			<div class="submenu ">
+				<header class="submenu__header">
+					<h2 class="submenu__title">Автомобілі</h2>
+					<button class="button _icon">
+						<span class="icon">
+							<svg class="icon-times">
+								<use xlink:href="symbol/sprite.svg#icon-times"></use>
+							</svg>
+						</span>
+					</button>
+				</header>
+
+				<ul class="submenu__list">
+					<li class="submenu__item _has-submenu">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Огляд модельного ряду </span>
+							<span class="icon">
+								<svg class="icon-arrow-next">
+									<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</span>
+						</a>
+
+						<div class="submenu">
+							<header class="submenu__header">
+								<button class="button _icon">
+									<span class="icon">
+										<svg class="icon-arrow-prev">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-prev"></use>
+										</svg>
+									</span>
+								</button>
+								<span class="submenu__title">Огляд модельного ряду</span>
+							</header>
+
+							<ul class="submenu__list">
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #1</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #2</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #3</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #4</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #5</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="submenu__item _has-submenu">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Огляд модельного ряду </span>
+							<span class="icon">
+								<svg class="icon-arrow-next">
+									<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</span>
+						</a>
+
+						<div class="submenu">
+							<header class="submenu__header">
+								<button class="button _icon">
+									<span class="icon">
+										<svg class="icon-arrow-prev">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-prev"></use>
+										</svg>
+									</span>
+								</button>
+								<span class="submenu__title">Огляд модельного ряду</span>
+							</header>
+
+							<ul class="submenu__list">
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #1</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #2</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #3</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #4</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #5</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Автомобілі в наявності</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Акційні автомобілі</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Тест-драйв</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Порівняти автомобілі</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Фінансові програми</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Прайс-лист</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Корпоративнi продажi</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+
+		<li class="menu__item _has-submenu">
+			<a href="#" class="menu__link">Акції</a>
+
+			<div class="submenu">
+				<header class="submenu__header">
+					<h2 class="submenu__title">Аакції</h2>
+					<button class="button _icon">
+						<span class="icon">
+							<svg class="icon-times">
+								<use xlink:href="symbol/sprite.svg#icon-times"></use>
+							</svg>
+						</span>
+					</button>
+				</header>
+
+				<ul class="submenu__list">
+					<li class="submenu__item _has-submenu">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Огляд модельного ряду </span>
+							<span class="icon">
+								<svg class="icon-arrow-next">
+									<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</span>
+						</a>
+
+						<div class="submenu">
+							<header class="submenu__header">
+								<button class="button _icon">
+									<span class="icon">
+										<svg class="icon-arrow-prev">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-prev"></use>
+										</svg>
+									</span>
+								</button>
+								<span class="submenu__title">Огляд модельного ряду</span>
+							</header>
+
+							<ul class="submenu__list">
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #1</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #2</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #3</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #4</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #5</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="submenu__item _has-submenu">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Огляд модельного ряду </span>
+							<span class="icon">
+								<svg class="icon-arrow-next">
+									<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</span>
+						</a>
+
+						<div class="submenu">
+							<header class="submenu__header">
+								<button class="button _icon">
+									<span class="icon">
+										<svg class="icon-arrow-prev">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-prev"></use>
+										</svg>
+									</span>
+								</button>
+								<span class="submenu__title">Огляд модельного ряду</span>
+							</header>
+
+							<ul class="submenu__list">
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #1</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #2</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #3</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #4</a>
+								</li>
+								<li class="submenu__item _has-submenu">
+									<a href="#" class="submenu__link">Підменю другого порядку #5</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Автомобілі в наявності</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Акційні автомобілі</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Тест-драйв</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Порівняти автомобілі</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Фінансові програми</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Прайс-лист</span>
+						</a>
+					</li>
+					<li class="submenu__item">
+						<a href="#" class="submenu__link">
+							<span class="submenu__link-text">Корпоративнi продажi</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</li>
+		
+		<li class="menu__item"><a href="#" class="menu__link">Сервіс</a></li>
+		
+		<li class="menu__item"><a href="#" class="menu__link">Аксесуари</a></li>
+		<li class="menu__item"><a href="#" class="menu__link">Новини</a></li>
+		<li class="menu__item"><a href="#" class="menu__link">Світ “Mercedes-Benz”</a></li>
+	</ul>
+</nav>
+				</div>
+			</div>
+		</header>
+		
+
+<main class="m-settings">
+	<div class="container">
+		
+		<div class="m-settings__block">
+			<h3 class="m-settings__title">
+				Страницы
+			</h3>
+			
+			<ul class="m-settings__list">
+				<li class="m-settings__item">
+					<a class="m-settings__link" href="index.html">Главная</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="m-settings__block">
+			<h3 class="m-settings__title">
+				Modals
+			</h3>
+
+			<h4>Регистрация</h4>
+			<ul class="m-settings__list">
+				<li class="m-settings__item">
+					<a class="m-settings__link" href="index.html">Форма входа</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</main>
+
+<style>
+
+	.m-settings .container {
+		max-width: 1200px;
+		margin: 0 auto;
+
+		min-height: 1000px;
+	}
+
+	.m-settings__block {
+		margin-bottom: 20px;
+	}
+
+	.m-settings__title {
+		margin: 10px 0 20px 0;
+	}
+
+	.m-settings__list {
+		margin: 0 0 0 20px;
+		padding: 0;
+		list-style: none;
+	}
+
+	.m-settings__link {
+		text-decoration: none;
+		color: #00adef;
+	}
+
+	.m-settings__link:hover {
+		text-decoration: underline;
+	}
+
+</style>
+
+			<footer class="site__footer footer">
+				<div class="footer__nav">
+					<nav class="footer-nav">
+						<div class="container">
+							<a href="#" class="footer-nav__item">
+								<div class="footer-nav__icon">
+									<span class="icon _xl">
+										<svg class="icon__svg icon-phone _xl">
+											<use xlink:href="symbol/sprite.svg#icon-phone"></use>
+										</svg>
+									</span>								
+								</div>
+								<div class="footer-nav__text">
+									Контакты
+									<span class="icon">
+										<svg class=" icon-arrow-next">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</span>
+								</div>
+							</a>
+							<a href="#" class="footer-nav__item">
+								<div class="footer-nav__icon">
+									<span class="icon _xl">
+										<svg class="icon__svg icon-test-drive _xl">
+											<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
+										</svg>
+									</span>
+								</div>	
+								<div class="footer-nav__text">
+									Тест-драйв
+									<span class="icon">
+										<svg class="icon-arrow-next">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</span>
+								</div>
+							</a>
+							<a href="#" class="footer-nav__item">
+								<div class="footer-nav__icon">
+									<span class="icon _xl">
+										<svg class="icon__svg icon-book _xl">
+											<use xlink:href="symbol/sprite.svg#icon-book"></use>
+										</svg>
+									</span>
+								</div>
+								<div class="footer-nav__text">
+									Запис на ТО
+									<span class="icon">
+										<svg class="icon-arrow-next">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</span>
+								</div>
+							</a>
+							<a href="#" class="footer-nav__item">
+								<div class="footer-nav__icon">
+									<span class="icon _xl">
+										<svg class="icon__svg icon-checkmark _xl">
+											<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
+										</svg>
+									</span>
+								</div>
+								<div class="footer-nav__text">
+									Автомобілі в наявності
+									<span class="icon">
+										<svg class="icon-arrow-next">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</span>
+								</div>
+							</a>
+							<a href="#" class="footer-nav__item">
+								<div class="footer-nav__icon">
+									<span class="icon _xl">
+										<svg class="icon__svg icon-sale _xl">
+											<use xlink:href="symbol/sprite.svg#icon-sale"></use>
+										</svg>
+									</span>
+								</div>	
+								<div class="footer-nav__text">
+									Акції
+									<span class="icon">
+										<svg class="icon-arrow-next">
+											<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</span>
+								</div>
+							</a>
+						</div>
+					</nav>
+				</div>
+
+				<div class="footer__main footer-main">
+					<div class="footer-main__top">
+						<div class="container">
+							<nav class="footer-main__breadcrumbs breadcrumbs">
+								<ol class="breadcrumbs__list">
+									<li class="breadcrumbs__item">
+										<a href="/" class="breadcrumbs__link">Mercedes-Benz</a>
+										<span class="icon">
+											<svg class=" icon-arrow-next">
+												<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+											</svg>
+										</span>
+									</li>
+									<li class="breadcrumbs__item">
+										Автомобілі в наявності
+									</li>
+								</ol>
+							</nav>
+
+							<a href="#" class="button button-totop">
+								Вгору
+								<span class="icon _top">
+									<svg class="icon-arrow-next">
+										<use xlink:href="symbol/sprite.svg#icon-arrow-next"></use>
+									</svg>
+								</span>	
+							</a>
+						</div>
+					</div>
+
+					<div class="footer-main__body">
+						<div class="container">
+							<div class="row">
+								<div class="footer-main__subscribe subscribe">
+									<h3 class="subscribe__title">Підписатись на розсилку “Mercedes-Benz”</h3>
+									<p class="subscribe__descr">Отримувати новини, пропозиції і т.п.</p>
+
+									<form class="subscribe__form form-subsrcribe" autocomplete='off'>
+										<div class="form-group">
+											<label class="label" for="form-subsrcribe-email">Email</label>
+											<input class="input" type="text" placeholder="Ваша email адреса" required>
+										</div>
+
+										<button type="button" class="button-primary _dark">Відписатись</button>
+										<button type="submit" class="button-primary">Підписатись</button>
+									</form>
+								</div>
+
+								<div class="footer-main__social social">
+									<h3 class="social__title">“Mercedes-Benz” у соціальних мережах:</h3>
+									<div class="social__list">
+										<a class="social__item" href="#">
+											<span class="icon">
+												<svg class="icon-facebook">
+													<use xlink:href="symbol/sprite.svg#icon-facebook"></use>
+												</svg>
+											</span>	
+										</a>
+
+										<a class="social__item" href="#">
+											<span class="icon">
+												<svg class="icon-instagram">
+													<use xlink:href="symbol/sprite.svg#icon-instagram"></use>
+												</svg>
+											</span>	
+										</a>
+
+										<a class="social__item" href="#">
+											<span class="icon">
+												<svg class="icon-youtube">
+													<use xlink:href="symbol/sprite.svg#icon-youtube"></use>
+												</svg>
+											</span>	
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer-main__bottom">
+						<div class="container">
+							<div class="footer__lang lang">
+								<button class="button lang__item">Українська</button>
+								<button class="button lang__item">Російська</button>
+							</div>
+
+							<nav class="footer-menu">
+								<ul class="footer-menu__list">
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Cookies</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Захист даних</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Правова інформація</a>
+									</li>
+									<li class="footer-menu__item">
+										<a href="#" class="footer-menu__link">Мапа сайту</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+
+				</div>
+			</footer>
+
+			<nav class="sticky-nav">
+	<div class="sticky-nav__list">
+		<div class="sticky-nav__item">
+			<button class="button-primary _icon-left" data-sticky-nav-mobile-text="Контакты">
+				<span class="icon">
+					<svg class="icon-phone">
+						<use xlink:href="symbol/sprite.svg#icon-phone"></use>
+					</svg>
+				</span>
+				<span class="button-primary__text">Контакты</span>
+			</button>
+		</div>
+		<div class="sticky-nav__item">
+			<button class="button-primary _icon-left" data-sticky-nav-mobile-text="Тест-драйв">
+				<span class="icon">
+					<svg class="icon-test-drive">
+						<use xlink:href="symbol/sprite.svg#icon-test-drive"></use>
+					</svg>
+				</span>
+				<span class="button-primary__text">Тест-драйв</span>
+			</button>
+		</div>
+		<div class="sticky-nav__item">
+			<button class="button-primary _icon-left" data-sticky-nav-mobile-text="Запис на ТО">
+				<span class="icon">
+					<svg class="icon-book">
+						<use xlink:href="symbol/sprite.svg#icon-book"></use>
+					</svg>
+				</span>
+				<span class="button-primary__text">Запис на ТО</span>
+			</button>
+		</div>
+		<div class="sticky-nav__item">
+			<button class="button-primary _icon-left" data-sticky-nav-mobile-text="В наявності">
+				<span class="icon">
+					<svg class="icon-checkmark">
+						<use xlink:href="symbol/sprite.svg#icon-checkmark"></use>
+					</svg>
+				</span>
+				<span class="button-primary__text">Автомобілі в наявності</span>
+			</button>
+		</div>
+		<div class="sticky-nav__item">
+			<button class="button-primary _icon-left" data-sticky-nav-mobile-text="Акції">
+				<span class="icon">
+					<svg class="icon-sale">
+						<use xlink:href="symbol/sprite.svg#icon-sale"></use>
+					</svg>
+				</span>
+				<span class="button-primary__text">Акції</span>
+			</button>
+		</div>
+	</div>
+</nav>
+
+		</div>
+
+	<script src="js/vendor.js"></script>
+	<script src="js/main.js"></script>
+	</body>
+
+</html>

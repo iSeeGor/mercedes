@@ -407,6 +407,14 @@ svg {
     vertical-align: top;
 }
 
+.link {
+    text-decoration: underline; 
+    color: #00adef;
+}
+.link:hover {
+    text-decoration: none;
+}
+
 /*============================================================================
 	#Typography
 ==============================================================================*/
@@ -523,6 +531,7 @@ h3 {
     -ms-flex-pack: center;
     justify-content: center;
     height: 100%;
+    min-height: 40px;
     padding: 5px 10px;
     cursor: pointer;
     -webkit-transition: background .3s ease,    color .3s ease;
@@ -568,6 +577,30 @@ h3 {
     background: #3c3c3c;
 
     fill: #999999;
+}
+
+.button-primary._google,
+.button-primary._facebook {
+    position: relative;
+}
+.button-primary._google .icon,
+.button-primary._facebook .icon {
+    position: absolute;
+    left: 10px;
+}
+
+.button-primary._google {
+    background: #eb4335;
+}
+.button-primary._google:hover {
+    background: #9e281e;
+}
+
+.button-primary._facebook {
+    background: #3c5a9a;
+}
+.button-primary._facebook:hover {
+    background: #1b305f;
 }
 
 .button-totop {
@@ -759,6 +792,10 @@ h3 {
     width: 25px;
     height: 19px;
 }
+.icon-google {
+    width: 20px;
+    height: 20px;
+}
 .icon-eq {
     width: 48px;
     height: 22px;
@@ -792,6 +829,7 @@ h3 {
     -ms-flex-direction: column;
         flex-direction: column;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .label {
@@ -2866,5 +2904,104 @@ h3 {
     .category-sort > .button {
         display: none;
     }
+}
+
+/* Popup
+===================================================*/
+/*============================================================================
+	#POPUP
+==============================================================================*/
+.site__popup {
+    display: none;
+}
+
+.popup {
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    max-width: 740px;
+    margin: 0 auto;
+    border-radius: 8px;
+    background: white;
+}
+.popup__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.popup-login__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.popup-login__brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center; 
+    -ms-flex-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 304px;
+        flex: 0 0 304px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 304px;
+    background: #222222;
+}
+.popup-login__brand img {
+    margin-bottom: 85px;
+}
+
+.popup-login__main {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+        flex: 1; 
+    padding: 20px;
+}
+
+.popup-login__header {
+    max-width: 305px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+}
+
+.popup-login__title {
+    line-height: 1.1; 
+    text-align: center;
+}
+
+.popup-login__body {
+    max-width: 305px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.popup-login .form-login {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.popup-login .form-login__button {
+    width: 100%; 
+    max-width: 100%;
+}
+
+.popup-login .social-login__button {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 10px;
+}
+
+.popup-login__footer {
+    margin-bottom: 10px; 
+    text-align: center;
+}
+.popup-login__footer * {
+    margin: 0;
 }
 /*# sourceMappingURL=index.css.map */
