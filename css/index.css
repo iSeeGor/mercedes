@@ -610,6 +610,9 @@ h3 {
     -webkit-box-align: center;
     align-items: center;
     -ms-flex-align: center;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 auto;
+        flex: 0 0 auto; 
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
@@ -617,7 +620,7 @@ h3 {
     height: 40px;
     -webkit-transition: color .3s ease;
          -o-transition: color .3s ease;
-            transition: color .3s ease; 
+            transition: color .3s ease;
     text-decoration: none;
     color: white;
     background: #3c3c3c;
@@ -1586,13 +1589,31 @@ h3 {
 }
 
 .card-options__item {
+    position: relative; 
     -webkit-box-align: center;
-    align-items: center; 
+    align-items: center;
     -ms-flex-align: center;
     width: 100%;
+    padding: 8px 0;
+}
+.card-options__item::after {
+    position: absolute;
+    top: 0;
+    left: -15px;
+    width: calc(100% + 30px);
+    height: 100%;
+    content: '';
+    -webkit-transition: opacity .3s ease;
+         -o-transition: opacity .3s ease;
+            transition: opacity .3s ease; 
+    opacity: 0;
+    background: #000000;
 }
 .card-options__item:not(:last-child) {
-    margin-bottom: 16px;
+    margin-bottom: 0;
+}
+.card-options__item:hover::after {
+    opacity: .05;
 }
 
 /* views
@@ -2113,17 +2134,29 @@ h3 {
 }
 
 .footer-main__breadcrumbs {
-    overflow-y: scroll;
-    width: 100%; 
     color: #d7d7d7;
 
     fill: #d7d7d7;
 }
-.footer-main__breadcrumbs .breadcrumbs__list {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    padding-bottom: 8px; 
-    white-space: nowrap;
+@media (max-width: 1200px) {
+    .footer-main__breadcrumbs {
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: 100%;
+    }
+}
+
+.footer-main .breadcrumbs__list {
+    width: 70%;
+}
+@media (max-width: 1200px) {
+    .footer-main .breadcrumbs__list {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+        width: 100%;
+        padding-bottom: 8px; 
+        white-space: nowrap;
+    }
 }
 
 .footer-main__body .row {
@@ -2271,7 +2304,12 @@ h3 {
 }
 
 .subscribe .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 0;
+}
+@media (max-width: 660px) {
+    .subscribe .form-group {
+        margin-bottom: 25px;
+    }
 }
 
 .social {
