@@ -227,10 +227,18 @@ const stickyFrontElements = () => {
 
 		$(this).scrollTop() >= elDist ? cloneElements() : repairElements();
 
-		let stickyHeight = $('.front-catalog-sticky').outerHeight() + $('.category-sort').outerHeight();
+		// Высота стики фильтра (662)
+		let stickyHeight = $('.front-catalog-sticky__header').outerHeight() + $('.category-sort').outerHeight();	
 		let elBottomDist = (elDist + elHeight) - stickyHeight;
 
-		$(this).scrollTop() >= elBottomDist ? freezElements($(this), elBottomDist) : unfreezElements($(this));
+		// Вычисляем оступ от низа макета
+		let pageHeight = $( document ).height();
+		let bottomOffset = pageHeight - (elDist + elHeight - $('.category-sort').outerHeight());
+
+		$(this).scrollTop() >= elBottomDist ? freezElements(bottomOffset) : unfreezElements();
+		
+		// console.log(stickyHeight);
+		
 
 	}).scroll();
 
@@ -250,8 +258,6 @@ const stickyFrontElements = () => {
 			stickyGroupTitle();
 		}
 
-		
-
 	};
 
 
@@ -268,16 +274,21 @@ const stickyFrontElements = () => {
 		}
 	};
 
-	function freezElements(_this, elBottomDist){
+	function freezElements(bottomOffset){
 		$('.front-catalog-sticky').css({
-			"top": elBottomDist - _this.scrollTop()
+			// "top": elBottomDist - _this.scrollTop(),
+			'position': 'absolute',
+			"top": 'auto',
+			"bottom": bottomOffset + "px",
 		})
 	}
 
 	function unfreezElements(){
 
 		$('.front-catalog-sticky').css({
-			"top": 0
+			'position': 'fixed',
+			"top": 0,
+			"bottom": 'auto'
 		})
 	}
 
@@ -309,14 +320,11 @@ function stickyGroupTitle(){
 
 		$('.cards-group__title').each(function(){
 			let distance = $(this).offset().top;
-			console.log(distance);
-			console.log('elemDis', elDist);
 			
 			if(elDist >= $(this).offset().top){
 				$('.front-catalog-sticky__group-title').html($(this).html());
-				console.log(true);
+
 			} else {
-				console.log(false);
 			}
 		})
 
