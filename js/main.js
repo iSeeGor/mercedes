@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
 	cardSlider();
 	cardOptionsToggle();
 
+	stickyFrontElements();
+
 	popupInit();
 })
 
@@ -116,15 +118,17 @@ const modelSortMobile = () => {
 
 const cartegoryCarSort = () => {
 	const buttons = document.querySelectorAll('.category-sort__item .button');
-	const butAll = document.querySelector('.category-sort .button-primary');
+	const butAll = document.querySelectorAll('.category-sort .button-primary');
 
 	buttons.forEach(button => {
 		button.addEventListener('click', classToggle);
 		
 	});
 
-	butAll.addEventListener('click', function(){
-		buttons.forEach(button => button.classList.remove('_is-active'));
+	butAll.forEach(button => {
+		button.addEventListener('click', function(){
+			buttons.forEach(button => button.classList.remove('_is-active'));
+		})
 	})
 
 	function classToggle(){
@@ -211,6 +215,114 @@ const popupInit = () => {
 		e.preventDefault();
 		$.magnificPopup.close();
 	});
+}
+
+const stickyFrontElements = () => {
+
+	let elDist = $('.front-catalog').offset().top;
+	let elHeight = $('.front-catalog').outerHeight();
+	let cloned = false;
+
+	$(window).scroll(function(){
+
+		$(this).scrollTop() >= elDist ? cloneElements() : repairElements();
+
+		let stickyHeight = $('.front-catalog-sticky').outerHeight() + $('.category-sort').outerHeight();
+		let elBottomDist = (elDist + elHeight) - stickyHeight;
+
+		$(this).scrollTop() >= elBottomDist ? freezElements($(this), elBottomDist) : unfreezElements($(this));
+
+	}).scroll();
+
+	function cloneElements(){	
+		
+		if(cloned === false){
+			$('.front-catalog-sticky').addClass('_is-visible');
+
+			$('.front-catalog__title').prependTo($('.front-catalog-sticky .front-catalog__header .container'));
+			$('.model-sort__content').prependTo($('.front-catalog-sticky .model-sort .container'));
+			$('.category-sort').prependTo($('.front-catalog-sticky .content__aside'));
+		
+			cloned = true;
+
+			console.log('clone the elements');
+			
+			stickyGroupTitle();
+		}
+
+		
+
+	};
+
+
+	function repairElements(){
+		if(cloned){
+			$('.front-catalog-sticky').removeClass('_is-visible');
+
+			$('.front-catalog-sticky .front-catalog__title').prependTo($('.front-catalog:not(._sticky) .front-catalog__header .container'));
+			$('.front-catalog-sticky .model-sort__content').prependTo($('.front-catalog:not(._sticky) .model-sort .container'))
+			$('.front-catalog-sticky .category-sort').prependTo($('.front-catalog:not(._sticky) .content__aside'))
+			
+			cloned = false;
+			console.log('remove the elements');
+		}
+	};
+
+	function freezElements(_this, elBottomDist){
+		$('.front-catalog-sticky').css({
+			"top": elBottomDist - _this.scrollTop()
+		})
+	}
+
+	function unfreezElements(){
+
+		$('.front-catalog-sticky').css({
+			"top": 0
+		})
+	}
+
+	
+}
+
+function stickyGroupTitle(){
+
+	// let elDist = $('.front-catalog-sticky__group-title').offset().top;
+	// console.log(elDist);
+
+	$(window).scroll(function(){
+
+		// let top = $(this).scrollTop();
+
+		// console.log('window scroll', top);
+
+		let elDist = $('.front-catalog-sticky__group-title').offset().top;
+		// console.log("sticky title", elDist);
+
+		// let element = $('.cards-group__title')[1];
+		// let first = $(element).offset().top;
+		// console.log('first element', first);
+
+		// if(elDist == first){
+		// 	$('.front-catalog-sticky__group-title').html($(element).html());
+		// 	console.log(true);
+		// }
+
+		$('.cards-group__title').each(function(){
+			let distance = $(this).offset().top;
+			console.log(distance);
+			console.log('elemDis', elDist);
+			
+			if(elDist >= $(this).offset().top){
+				$('.front-catalog-sticky__group-title').html($(this).html());
+				console.log(true);
+			} else {
+				console.log(false);
+			}
+		})
+
+
+	}).scroll();
+	
 }
 
 // const mainSlider = () => {
