@@ -1,6 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', function(){
 	mainMenu();
+	mobileMenu();
 	mainSLider();
 	modelSort();
 	modelSortMobile();
@@ -56,6 +57,45 @@ const mainMenu = () => {
 	function removeBodyOverlay(){
 		body.classList.remove('overlay');
 	}
+
+}
+
+const mobileMenu = () => {
+	let burger = $('.button-burger');
+	let menu = $('.js-mobile-nav');
+	let body = $('body');
+	let hasSubmenu = $('._submenu');
+
+	$(document).on('click', '.button-burger', function () { 
+
+
+		$(this).toggleClass('_is-active');
+
+		if(menu.hasClass('_is-visible')){
+			menu.removeClass('_is-visible');
+			body.removeClass('overflow');
+			
+		} else {
+			menu.addClass('_is-visible');
+			body.addClass('overflow');
+		}
+	})
+
+	
+	$(document).on('click', '._submenu', function (e){
+		e.stopPropagation();
+		let _this = $(this);
+
+		_this.find(' > .m-submenu').addClass('_is-visible');
+	});
+
+	$(document).on('click', '.m-submenu__header', function(e){
+		e.stopPropagation();
+		let _this = $(this);
+
+		_this.closest('.m-submenu').removeClass('_is-visible');
+		// console.log(_this.closest('.m-submenu'));
+	});	
 
 }
 
