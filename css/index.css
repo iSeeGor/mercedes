@@ -1648,11 +1648,21 @@ h3 {
     z-index: 21;
 }
 
+@media (max-width: 1200px) {
+    body {
+        min-height: 100vh;
+        min-height: -webkit-fill-available;
+    }
+    html {
+        height: -webkit-fill-available;
+    }
+}
+
 .mobile-nav {
     position: fixed;
     visibility: hidden;
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 58px);
     -webkit-transition: all .6s ease;
          -o-transition: all .6s ease;
             transition: all .6s ease; 
