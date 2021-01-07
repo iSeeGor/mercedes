@@ -2718,6 +2718,15 @@ h3 {
     }
 }
 
+@media (max-width: 1200px) {
+    .front-catalog._sticky .model-sort__list {
+        top: calc(100% + 20px); 
+        -webkit-transform: translateY(0);
+            -ms-transform: translateY(0);
+                transform: translateY(0);
+    }
+}
+
 .front-catalog:not(._sticky) {
     margin-bottom: 100px;
 }
@@ -3006,7 +3015,7 @@ h3 {
 
 .front-catalog-sticky {
     position: fixed;
-    z-index: 200;
+    z-index: 20;
     top: 0;
     display: none;
     visibility: hidden;
