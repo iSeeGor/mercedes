@@ -351,6 +351,35 @@ template {
 ===================================================*/
 /* global
 ===================================================*/
+@-webkit-keyframes pulse {
+    0% {
+        -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+    50% {
+        -webkit-transform: translateY(-6px) rotate(90deg);
+                transform: translateY(-6px) rotate(90deg);
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+}
+@keyframes pulse {
+    0% {
+        -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+    50% {
+        -webkit-transform: translateY(-6px) rotate(90deg);
+                transform: translateY(-6px) rotate(90deg);
+    }
+    100% {
+        -webkit-transform: translateY(0) rotate(90deg);
+                transform: translateY(0) rotate(90deg);
+    }
+}
+
 /*============================================================================
 	#Fonts
 ==============================================================================*/
@@ -1694,6 +1723,10 @@ h3 {
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(72.4%, #ffffff));
     background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #ffffff 72.4%);
     background:    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 72.4%);
+}
+.mobile-nav__footer .icon-down-double {
+    -webkit-animation: 1s pulse infinite;
+            animation: 1s pulse infinite;
 }
 .mobile-nav._is-visible {
     visibility: visible;
