@@ -1,10 +1,3 @@
-// $(function(){
-	
-// 	// mainMenu();
-// 	// mainSlider();
-// 	// brandsSlider();
-// 	// sectionCollapse();
-// })
 
 document.addEventListener('DOMContentLoaded', function(){
 	mainMenu();
@@ -14,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(){
 	cartegoryCarSort();
 	cardSlider();
 	cardOptionsToggle();
+	stickyNav();
 
 	popupInit();
 
@@ -67,9 +61,7 @@ const mainMenu = () => {
 
 const mainSLider = () => {
 	let slider = new Swiper('.main-slider', {
-		// loop: true,
 		spaceBetween: 60,
-		// slidesPerView: 'auto',
 		slidesPerView: 'auto',
 
 		pagination: {
@@ -77,11 +69,6 @@ const mainSLider = () => {
 			type: 'bullets',
 			clickable: true,
 		},
-
-		// navigation: {
-		// 	nextEl: '.brands-slider .swiper-button-next',
-		// 	prevEl: '.brands-slider .swiper-button-prev',
-		// },
 	})
 }
 
@@ -220,6 +207,21 @@ const popupInit = () => {
 	});
 }
 
+const stickyNav = () => {
+
+	let buttons = $('.sticky-nav .button-primary');
+
+	if(window.innerWidth <= 660){
+		
+		buttons.each(function(){
+			let buttonText = $(this).find('.button-primary__text');
+			
+			buttonText.html($(this).attr('data-sticky-nav-mobile-text'));
+		});
+	}
+
+}
+
 const stickyFrontElements = () => {
 
 	let elDist = $('.front-catalog').offset().top;
@@ -268,8 +270,6 @@ const stickyFrontElements = () => {
 			$('.category-sort').prependTo($('.front-catalog-sticky .content__aside'));
 		
 			cloned = true;
-
-			console.log('clone the elements');
 			
 			stickyGroupTitle();
 		}
@@ -286,7 +286,6 @@ const stickyFrontElements = () => {
 			$('.front-catalog-sticky .category-sort').prependTo($('.front-catalog:not(._sticky) .content__aside'))
 			
 			cloned = false;
-			console.log('remove the elements');
 		}
 	};
 
@@ -313,26 +312,11 @@ const stickyFrontElements = () => {
 
 function stickyGroupTitle(){
 
-	// let elDist = $('.front-catalog-sticky__group-title').offset().top;
-	// console.log(elDist);
 
 	$(window).scroll(function(){
 
-		// let top = $(this).scrollTop();
-
-		// console.log('window scroll', top);
-
 		let elDist = $('.front-catalog-sticky__group-title').offset().top;
-		// console.log("sticky title", elDist);
 
-		// let element = $('.cards-group__title')[1];
-		// let first = $(element).offset().top;
-		// console.log('first element', first);
-
-		// if(elDist == first){
-		// 	$('.front-catalog-sticky__group-title').html($(element).html());
-		// 	console.log(true);
-		// }
 
 		$('.cards-group__title').each(function(){
 			let distance = $(this).offset().top;
