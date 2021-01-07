@@ -70,6 +70,7 @@ const mobileMenu = () => {
 
 
 		$(this).toggleClass('_is-active');
+		$('.m-submenu').removeClass('_is-visible');
 
 		if(menu.hasClass('_is-visible')){
 			menu.removeClass('_is-visible');
@@ -79,23 +80,60 @@ const mobileMenu = () => {
 			menu.addClass('_is-visible');
 			body.addClass('overflow');
 		}
+
+		checkScroll();
 	})
 
-	
+	// show submenu
 	$(document).on('click', '._submenu', function (e){
 		e.stopPropagation();
 		let _this = $(this);
+		let submenu = _this.find(' > .m-submenu')
+		let menu = submenu.find('.m-submenu__list')
+		let container = submenu.find('.m-submenu__container');
 
-		_this.find(' > .m-submenu').addClass('_is-visible');
+		submenu.addClass('_is-visible');
+
+		checkScroll(menu, container);
 	});
 
+	// hide submenu
 	$(document).on('click', '.m-submenu__header', function(e){
 		e.stopPropagation();
 		let _this = $(this);
+		let menu = _this.closest('._submenu').closest('.m-submenu__list');
+		let container = _this.closest('._submenu').closest('.m-submenu__container');
 
 		_this.closest('.m-submenu').removeClass('_is-visible');
-		// console.log(_this.closest('.m-submenu'));
-	});	
+		
+		if(_this.closest('._submenu').hasClass('m-menu__item')){
+			checkScroll();
+		} else {
+			checkScroll(menu, container);
+		}
+		
+	});
+
+	function checkScroll(menu = $('.m-menu'), container = $('.mobile-nav__container')){
+		
+		let containerH = container.outerHeight();
+		let menuH = menu.outerHeight();
+
+		$('.m-submenu__container').off('scroll');
+		$('.mobile-nav__container').off('scroll');
+
+		$(container).on('scroll', function(){
+			let scrollTop = $(this).scrollTop();
+
+			if(menuH > containerH + scrollTop){
+				$('.mobile-nav__footer').addClass('_is-visible');
+			} else {
+				$('.mobile-nav__footer').removeClass('_is-visible');
+				
+			}
+		}).scroll()
+
+	};
 
 }
 
