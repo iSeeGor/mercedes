@@ -15,9 +15,12 @@ document.addEventListener('DOMContentLoaded', function(){
 	cardSlider();
 	cardOptionsToggle();
 
-	stickyFrontElements();
-
 	popupInit();
+
+	// if(window.innerWidth >= 768) {
+	// 	stickyFrontElements();
+	// }
+	stickyFrontElements();
 })
 
 const mainMenu = () => {
@@ -225,20 +228,33 @@ const stickyFrontElements = () => {
 
 	$(window).scroll(function(){
 
-		$(this).scrollTop() >= elDist ? cloneElements() : repairElements();
+		let scrollTop = $(window).scrollTop();
 
-		// Высота стики фильтра (662)
-		let stickyHeight = $('.front-catalog-sticky__header').outerHeight() + $('.category-sort').outerHeight();	
-		let elBottomDist = (elDist + elHeight) - stickyHeight;
+		scrollTop >= elDist ? cloneElements() : repairElements();
 
-		// Вычисляем оступ от низа макета
-		let pageHeight = $( document ).height();
-		let bottomOffset = pageHeight - (elDist + elHeight - $('.category-sort').outerHeight());
 
-		$(this).scrollTop() >= elBottomDist ? freezElements(bottomOffset) : unfreezElements();
-		
-		// console.log(stickyHeight);
-		
+		function stickyOffsetBottom(){
+
+			let sctickyElemHeight = null;			
+			let elBottomDist = null;
+
+			if(window.innerWidth >= 1200){
+				sctickyElemHeight = $('.front-catalog-sticky__header').outerHeight() + $('.category-sort').outerHeight();
+			} else {
+				sctickyElemHeight = $('.front-catalog-sticky').outerHeight();
+			}
+
+			elBottomDist = (elDist + elHeight) - sctickyElemHeight;
+
+			// Вычисляем оступ от низа макета
+			let pageHeight = $( document ).height();
+			let bottomOffset = pageHeight - (elDist + elHeight);
+			let stickyOffsetBottom = bottomOffset + $('.category-sort').outerHeight() - $('.front-catalog-sticky .content__main').outerHeight();
+
+			$(this).scrollTop() >= elBottomDist ? freezElements(stickyOffsetBottom) : unfreezElements();
+		}
+
+		stickyOffsetBottom();
 
 	}).scroll();
 
@@ -274,12 +290,12 @@ const stickyFrontElements = () => {
 		}
 	};
 
-	function freezElements(bottomOffset){
+	function freezElements(stickyOffsetBottom){
 		$('.front-catalog-sticky').css({
 			// "top": elBottomDist - _this.scrollTop(),
 			'position': 'absolute',
 			"top": 'auto',
-			"bottom": bottomOffset + "px",
+			"bottom": stickyOffsetBottom + "px",
 		})
 	}
 
