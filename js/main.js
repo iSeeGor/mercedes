@@ -65,7 +65,10 @@ const mobileMenu = () => {
 	let menu = $('.js-mobile-nav');
 	let body = $('body');
 	let hasSubmenu = $('._submenu');
-
+	menu.css({
+		'display': 'block',
+	});
+	
 	$(document).on('click', '.button-burger', function () { 
 
 
@@ -78,6 +81,7 @@ const mobileMenu = () => {
 			
 		} else {
 			menu.addClass('_is-visible');
+			
 			body.addClass('overflow');
 		}
 
