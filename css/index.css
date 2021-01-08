@@ -1674,6 +1674,9 @@ h3 {
 
 .header {
     position: relative;
+}
+
+.header__mobile-nav {
     z-index: 21;
 }
 
@@ -1703,7 +1706,9 @@ h3 {
 }
 .mobile-nav__container {
     overflow-y: auto;
+    max-width: 660px;
     height: 100%;
+    margin: 0 auto;
 }
 .mobile-nav__footer {
     position: fixed;
