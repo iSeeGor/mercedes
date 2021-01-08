@@ -314,7 +314,7 @@ const stickyFrontElements = () => {
 
 		let scrollTop = $(window).scrollTop();
 
-		scrollTop >= elDist ? cloneElements() : repairElements();
+		scrollTop >= (elDist + $('.front-catalog__header').outerHeight() - 20) ? cloneElements() : repairElements();
 
 
 		function stickyOffsetBottom(){
@@ -347,7 +347,7 @@ const stickyFrontElements = () => {
 		if(cloned === false){
 			$('.front-catalog-sticky').addClass('_is-visible');
 
-			$('.front-catalog__title').prependTo($('.front-catalog-sticky .front-catalog__header .container'));
+			// $('.front-catalog__title').prependTo($('.front-catalog-sticky .front-catalog__header .container'));
 			$('.model-sort__content').prependTo($('.front-catalog-sticky .model-sort .container'));
 			$('.category-sort').prependTo($('.front-catalog-sticky .content__aside'));
 		
@@ -363,7 +363,7 @@ const stickyFrontElements = () => {
 		if(cloned){
 			$('.front-catalog-sticky').removeClass('_is-visible');
 
-			$('.front-catalog-sticky .front-catalog__title').prependTo($('.front-catalog:not(._sticky) .front-catalog__header .container'));
+			// $('.front-catalog-sticky .front-catalog__title').prependTo($('.front-catalog:not(._sticky) .front-catalog__header .container'));
 			$('.front-catalog-sticky .model-sort__content').prependTo($('.front-catalog:not(._sticky) .model-sort .container'))
 			$('.front-catalog-sticky .category-sort').prependTo($('.front-catalog:not(._sticky) .content__aside'))
 			
